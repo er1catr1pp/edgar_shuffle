@@ -1,0 +1,107 @@
+body.posts .post-container{
+  width: 575px;
+  min-height: 160px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px 0 10px 0;
+  position: relative;
+}
+
+body.posts .post-header{
+  margin: 0 10px 10px 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+  line-height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+body.posts .post-body{
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  margin-left: 15px;
+  word-wrap: break-word;
+  margin-bottom: 5px;
+}
+
+body.posts .post-footer{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+body.posts .account-icon{
+  flex: 0 0 40px;
+  display: inline-block;
+  position: relative;
+  margin: 0 5px 5px 0;
+}
+
+body.posts .account-avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+body.posts .provider-icon{
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+}
+
+body.posts .post-category{
+  color: white;
+  font-style: italic;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 5px 10px 5px 11px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 180px;
+}
+
+body.posts .account-username{
+  flex: 0 1 auto;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 250px;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  min-width: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+body.posts .post-distribution-time{
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+body.posts .content-image{
+  height: 60px;
+  margin-right: 10px;
+}

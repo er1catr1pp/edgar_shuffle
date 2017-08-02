@@ -1,0 +1,55 @@
+var Category = React.createClass({
+
+  render() {
+
+    const colorBorderStyle = {borderTopColor: this.props.category.color};
+    const isShuffled = this.props.category.isShuffled;
+    const relative_url_root = "<%= Rails.application.config.relative_url_root %>";
+
+    return (
+
+      <div className="category-container" style={colorBorderStyle}>
+        
+        <div className="category-text">
+          <div className="category-name">
+            {this.props.category.name}
+          </div>
+          <div className="category-description">
+            Updates in Library: {this.props.category.n_contents}
+          </div>
+        </div>
+
+        <div className="category-actions">
+
+          {/* Shuffle */}
+          <form action={relative_url_root + '/categories/' + this.props.category.id} method="POST">
+            <input type="hidden" name="_method" value="PUT" />
+            <input type="hidden" name="category[is_shuffled]" value="true" />
+
+            <a id="shuffle" href="#" title="Shuffle Category" onClick={this.clickCategoryAction}>
+              <i className='fa fa-random'></i>
+            </a>
+
+          </form>
+
+          {/* Un-shuffle */}
+          <form action={relative_url_root + '/categories/' + this.props.category.id}  method="POST">
+            <input type="hidden" name="_method" value="PUT" />
+            <input type="hidden" name="category[is_shuffled]" value="false" />
+
+            <a href="#" title="Un-shuffle Category" onClick={this.clickCategoryAction}>
+              <i className='fa fa-list-ul'></i>
+            </a>
+
+          </form>
+
+        </div>
+      </div>
+    );
+  },
+
+  clickCategoryAction: function(e) {
+    e.currentTarget.parentElement.submit();
+  }
+  
+});

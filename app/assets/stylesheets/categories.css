@@ -1,0 +1,52 @@
+body.categories .category-container {
+  height: 80px;
+  width: 31%;
+  min-width: 20em;
+  margin: 10px 1%;
+  float: left;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 10px 15px 26px 15px;
+  border: 1px solid #c8c8c8;
+  border-top: 10px solid;
+  position: relative;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+}
+
+body.categories .category-text{
+  float: left;
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+body.categories .category-actions{
+  float: right;
+  width: 50px;
+}
+
+body.categories .category-description{
+  font-size: 13px;
+  color: #a8a8a8;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+body.categories .category-actions form{
+  float: left;
+  margin: 0 2px;
+}
+
+body.categories .category-actions a{
+  padding: 2px;
+  border: 1px solid #c8c8c8;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #666666;
+  font-weight: normal;
+}

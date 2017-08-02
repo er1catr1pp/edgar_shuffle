@@ -1,0 +1,39 @@
+var Post = React.createClass({
+
+  render() {
+
+    const backgroundColorStyle = {backgroundColor: this.props.post.category.color};
+    const relative_url_root = "<%= Rails.application.config.relative_url_root %>";
+
+    return (
+
+      <div className="post-container">
+
+        <div className="post-header">
+          <div className="account-icon">
+            <img className="provider-icon" src={relative_url_root + this.props.post.provider.icon_url}/>
+            <img className="account-avatar" src={relative_url_root + this.props.post.account.avatar_url}/>
+          </div>
+          <div className="account-username">
+            {this.props.post.account.username}
+          </div>
+          <div className="post-distribution-time">
+            Scheduled for {this.props.post.distribution_time}
+          </div>
+        </div>
+
+        <div className="post-body">
+          {this.props.post.content.image_url && <img className="content-image" src={relative_url_root + this.props.post.content.image_url}/>}
+          {this.props.post.content.text}
+        </div>
+
+        <div className="post-footer">
+          <div className="post-category" style={backgroundColorStyle}>
+            {this.props.post.category.name}
+          </div>
+        </div>
+
+      </div>
+    );
+  }
+});

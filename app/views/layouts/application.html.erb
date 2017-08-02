@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EdgarShuffle</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  </head>
+
+  <body class="<%= [params[:controller].split('/').join('-'),params[:action]].join(' ') %>">
+
+    <!-- navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <%= link_to 'Edgar Shuffle', root_path, :class => 'navbar-brand' %>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="<%='active' if params[:controller] == 'posts'%>">
+            <%= link_to 'Queue', root_path %>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li class="<%='active' if params[:controller] == 'categories'%>">
+            <%= link_to 'Categories', categories_path %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- content -->
+    <div id="content-container" class="container">
+
+      <!-- flash messages -->
+      <% flash.each do |key, value| %>
+        <div class="<%= flash_class(key) %>">
+          <%= value %>
+        </div>
+      <% end %>
+
+      <%= yield %>
+    </div>
+    
+  </body>
+</html>
